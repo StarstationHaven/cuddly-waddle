@@ -25,9 +25,9 @@ const App: React.FC = () => {
 
   const socialLinks = [
     { icon: <MessageCircle className="w-4 h-4" />, label: 'TikTok', url: 'https://www.tiktok.com/@starletheals' },
-    { icon: <Youtube className="w-4 h-4" />, label: 'YouTube', url: 'https://www.youtube.com/@StarletHeals' },
     { icon: <Instagram className="w-4 h-4" />, label: 'Instagram', url: 'https://www.instagram.com/starletheals/' },
-    { icon: <Coffee className="w-4 h-4" />, label: 'Ko-fi (Support Me!)', url: 'https://ko-fi.com/starletheals' }
+    { icon: <Youtube className="w-4 h-4" />, label: 'YouTube', url: 'https://www.youtube.com/@StarletHeals' },
+    { icon: <Coffee className="w-4 h-4" />, label: 'Ko-fi', url: 'https://ko-fi.com/starletheals' }
   ];
 
   const renderContent = () => {
@@ -42,7 +42,7 @@ const App: React.FC = () => {
             className="flex flex-col items-center text-center space-y-4 md:space-y-8 py-1 md:py-2"
           >
             {/* Landing Page Image */}
-            <div className="w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-lg relative mb-1 md:mb-2">
+            <div className="w-20 h-20 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg relative mb-1">
               <img 
                 src="https://picsum.photos/seed/starlet/400/400" 
                 alt="Starlet" 
@@ -52,30 +52,29 @@ const App: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-star-accent-brown/10 to-transparent"></div>
             </div>
 
-            <div className="space-y-2 md:space-y-4 max-w-lg">
-              <h1 className="text-3xl md:text-5xl gradient-text mb-1 md:mb-2">Starlet Heals ★</h1>
+            <div className="space-y-2 md:space-y-3 max-w-lg">
+              <h1 className="text-3xl md:text-4xl gradient-text mb-0.5">Starlet Heals ★</h1>
               <p className="font-hand text-lg md:text-2xl text-star-accent-brown">Overwatch Support Main & Social Worker</p>
               
-              <div className="h-px w-12 md:w-16 bg-star-accent-brown/20 mx-auto my-2 md:my-4"></div>
+              <div className="h-px w-10 md:w-14 bg-star-accent-brown/20 mx-auto my-1 md:my-2"></div>
               
-              <p className="text-star-ink/80 leading-relaxed text-sm md:text-lg px-2 md:px-4">
-                Hello! I am Starlet, an Overwatch support main & social worker. 
-                My goal is to create content that acts as a force of good for others, 
-                by connecting gaming, mental health, and design. 
-                <span className="block mt-1 md:mt-2 font-bold text-star-accent-rose">I heal others in-game and in real life!</span>
+              <p className="text-star-ink/80 leading-relaxed text-sm md:text-base px-2 md:px-4">
+                Hello! I am Starlet, and I created content that connects gaming, mental health, and design. 
+                My content is made to support, inform, and inspire!
+                <span className="block mt-1 font-bold text-star-accent-rose">I heal others in-game and in real life!</span>
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-2 md:gap-3 pt-1 md:pt-2 px-2 md:px-4 w-full md:w-auto">
+            <div className="grid grid-cols-2 gap-2 md:gap-3 pt-1 md:pt-2 px-4 md:px-8 w-full max-w-md">
               {socialLinks.map((s, i) => (
                 <a 
                   key={i} 
                   href={s.url} 
                   target="_blank" 
-                  className="cozy-card px-3 md:px-4 py-2 md:py-2.5 bg-white/50 hover:bg-star-accent-rose hover:text-white transition-all group flex items-center justify-center md:justify-start gap-2 md:gap-2.5 border-star-accent-brown/10"
+                  className="cozy-card px-3 md:px-5 py-2 md:py-3 bg-white/30 text-star-accent-brown hover:text-star-accent-rose hover:border-star-accent-rose transition-all group flex items-center justify-center gap-2 md:gap-3 border-star-accent-brown/20"
                 >
-                  <span className="group-hover:scale-110 transition-transform">{s.icon}</span>
-                  <span className="text-[8px] md:text-[9px] font-bold uppercase tracking-widest">{s.label}</span>
+                  <span className="group-hover:scale-110 transition-transform scale-110">{s.icon}</span>
+                  <span className="text-[10px] md:text-[12px] font-header font-bold uppercase tracking-widest whitespace-nowrap">{s.label}</span>
                 </a>
               ))}
             </div>
@@ -88,11 +87,11 @@ const App: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="space-y-6 md:space-y-8"
+            className="space-y-4 w-full"
           >
-            <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-start">
-              <div className="w-full max-w-[160px] md:max-w-[240px] md:w-1/3 space-y-4 md:space-y-6">
-                <div className="aspect-square rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border-4 border-white shadow-xl relative">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center md:items-start">
+              <div className="w-full max-w-[140px] md:max-w-[180px] space-y-3 md:pt-8">
+                <div className="aspect-square rounded-2xl overflow-hidden border-2 border-white shadow-md relative">
                   <img 
                     src="https://picsum.photos/seed/starlet/800/800" 
                     alt="Starlet" 
@@ -101,29 +100,30 @@ const App: React.FC = () => {
                   />
                 </div>
                 
-                <div className="cozy-card p-4 md:p-5 bg-star-accent-brown/5 border-star-accent-brown/10 hidden md:block">
-                  <h3 className="text-[9px] font-bold uppercase tracking-widest text-star-ink/30 mb-3 flex items-center gap-2">
-                    <Star className="w-3 h-3 text-star-gold" /> Fun Facts
+                <div className="bg-star-accent-brown/5 rounded-2xl p-4 border border-star-accent-brown/10 hidden md:block">
+                  <h3 className="text-[9px] font-bold uppercase tracking-[0.2em] text-star-accent-brown/40 mb-3 flex items-center justify-center gap-2">
+                    <Star className="w-3 h-3 fill-star-gold text-star-gold" /> Fun Facts
                   </h3>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-3">
                     {[
                       { label: 'Peak Rank', value: 'Master 1' },
                       { label: 'Mains', value: 'Mercy / Juno' },
                       { label: 'Birthday', value: 'Dec 21' },
-                      { label: 'Symbol', value: 'Stars!' }
+                      { label: 'Symbol', value: 'Stars!' },
+                      { label: 'Fav Colors', value: 'Orange, Purple, Magenta, Blue' }
                     ].map((fact, i) => (
-                      <div key={i} className="space-y-0.5">
-                        <p className="text-[7px] font-bold uppercase tracking-widest text-star-ink/30">{fact.label}</p>
-                        <p className="text-[10px] font-bold text-star-accent-brown leading-tight">{fact.value}</p>
+                      <div key={i} className="flex flex-col items-center text-center">
+                        <span className="text-[7px] font-bold uppercase tracking-widest text-star-ink/30">{fact.label}</span>
+                        <span className="text-[10px] font-bold text-star-accent-brown leading-tight">{fact.value}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
 
-              <div className="w-full md:w-2/3 space-y-4 md:space-y-6 text-center">
-                <h2 className="text-2xl md:text-4xl text-star-accent-rose">About Me</h2>
-                <div className="space-y-4 text-star-ink/80 leading-relaxed text-base md:text-lg">
+              <div className="flex-1 space-y-4 text-center md:text-left">
+                <h2 className="text-3xl text-star-accent-rose text-center mb-2">About Me</h2>
+                <div className="space-y-4 text-star-ink/80 leading-relaxed text-sm md:text-base">
                   <p>
                     I started Starlet Heals to combine my background in social work and my lifelong love for gaming. 
                     As a child, gaming was more than an escape for me. It was a way to propel myself forward.
@@ -136,15 +136,17 @@ const App: React.FC = () => {
                     My goal is create an accepting space where gaming and mental health bring people together. 
                     I hope you find the ability to shine and embrace your natural self.
                   </p>
-                  <p className="font-hand text-2xl text-star-accent-brown pt-1">
-                    Thank you for visiting!
-                  </p>
+                  <div className="pt-2 text-center">
+                    <p className="font-hand text-2xl text-star-accent-brown">
+                      Thank you for visiting!
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Mobile Fun Facts */}
-            <div className="cozy-card p-4 bg-star-accent-brown/5 border-star-accent-brown/10 md:hidden">
+            <div className="bg-star-accent-brown/5 rounded-2xl p-4 border border-star-accent-brown/10 md:hidden">
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { label: 'Peak Rank', value: 'Master 1' },
@@ -168,14 +170,14 @@ const App: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="space-y-8"
+            className="space-y-6 w-full px-4 md:px-12"
           >
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-1">
               <h2 className="text-3xl text-star-accent-rose">Healing Hub</h2>
-              <p className="text-sm text-star-ink/50 uppercase tracking-widest font-bold">Latest Support Guides & Content</p>
+              <p className="text-[10px] text-star-ink/40 uppercase tracking-widest font-bold">Latest Support Guides & Content</p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-6">
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <div key={i} className="bg-star-ink/5 rounded-3xl aspect-[9/16] flex items-center justify-center relative group overflow-hidden border border-star-brown/10 shadow-sm">
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
@@ -233,16 +235,14 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-4 md:p-12 selection:bg-star-gold/30">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 selection:bg-star-gold/30">
       
-      {/* Navigation - Persistent Header Style */}
-      <header className="w-full max-w-2xl mb-8 md:mb-12 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
-        <div className="flex items-center gap-2">
-          <Star className="w-4 h-4 md:w-5 md:h-5 text-star-gold fill-star-gold" />
-          <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.3em] text-star-ink/40">Starlet Heals</span>
-        </div>
+      {/* Main Card Container */}
+      <main className="w-full max-w-xl cozy-card p-4 md:p-6 relative overflow-hidden flex flex-col items-center">
+        <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-star-accent-rose to-star-accent-brown"></div>
         
-        <nav className="bg-star-cream/80 backdrop-blur-md px-4 md:px-6 py-2 md:py-2.5 rounded-full shadow-sm border border-star-accent-brown/5 flex gap-4 md:gap-6 text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-star-ink/60">
+        {/* Integrated Navigation */}
+        <nav className="mb-4 md:mb-6 bg-star-cream/80 backdrop-blur-md px-6 md:px-8 py-2 md:py-3 rounded-full shadow-sm border border-star-accent-brown/10 flex gap-6 md:gap-10 text-[10px] md:text-[12px] font-bold uppercase tracking-widest text-star-ink/60">
           {tabs.map(tab => (
             <button 
               key={tab.id}
@@ -256,29 +256,27 @@ const App: React.FC = () => {
             </button>
           ))}
         </nav>
-      </header>
 
-      {/* Main Card Container - Shrinked for better breathing room */}
-      <main className="w-full max-w-3xl min-h-[400px] md:min-h-[500px] cozy-card p-4 md:p-12 relative overflow-hidden flex flex-col">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-star-accent-rose to-star-accent-brown"></div>
-        
-        <AnimatePresence mode="wait">
-          {renderContent()}
-        </AnimatePresence>
+        <div className="w-full flex-1 flex flex-col items-center">
+          <AnimatePresence mode="wait">
+            {renderContent()}
+          </AnimatePresence>
+        </div>
+
+        {/* Footer Integrated into Card */}
+        <footer className="mt-6 md:mt-8 pt-4 border-t border-star-accent-brown/10 w-full text-center space-y-1">
+          <div className="flex items-center justify-center gap-4 text-star-ink/20">
+            <div className="h-px w-8 bg-current"></div>
+            <Star className="w-3 h-3 fill-current" />
+            <div className="h-px w-8 bg-current"></div>
+          </div>
+          <p className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-star-ink/30">© 2026 Starlet Heals • Healing in-game and in real life</p>
+        </footer>
 
         {/* Decorative elements */}
         <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-star-gold/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute -top-12 -left-12 w-48 h-48 bg-star-accent-rose/5 rounded-full blur-3xl pointer-events-none"></div>
       </main>
-
-      <footer className="mt-12 text-center space-y-2">
-        <div className="flex items-center justify-center gap-4 text-star-ink/20">
-          <div className="h-px w-8 bg-current"></div>
-          <Star className="w-3 h-3 fill-current" />
-          <div className="h-px w-8 bg-current"></div>
-        </div>
-        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-star-ink/30">© 2026 Starlet Heals • Healing in-game and in real life</p>
-      </footer>
     </div>
   );
 };
