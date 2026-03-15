@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Caveat:wght@400..700&display=swap');
+
+@font-face {
+    font-family: 'TDTDBalbam';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/TDTD_MoonlightMemories.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Mulish", sans-serif;
+  --font-serif: "Literata", serif;
+  --font-header: "Literata", serif;
+  --font-hand: "Caveat", cursive;
+  
+  --color-star-accent-rose: #DE627F;
+  --color-star-accent-brown: #8F6858;
+  --color-star-gold: #FFD54F;
+  --color-star-bg: #FAE8E0;
+  --color-star-cream: #FEF4F2;
+  --color-star-ink: #3E2C2C;
+  --color-star-brown: #8F6858;
+}
+
+@layer base {
+  body {
+    @apply bg-star-bg text-star-ink font-sans font-semibold antialiased relative;
+  }
+
+  body::before {
+    content: "";
+    @apply fixed inset-0 pointer-events-none opacity-[0.08] z-[100];
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-header tracking-normal font-bold;
+  }
+}
+
+.cozy-card {
+  @apply bg-star-cream rounded-[2rem] shadow-xl shadow-star-accent-brown/5 border-2 border-star-brown;
+}
+
+.handwritten {
+  @apply font-hand text-2xl transform -rotate-2 text-star-accent-brown;
+}
+
+.star-accent {
+  @apply text-star-accent-rose drop-shadow-[0_0_5px_rgba(222,98,127,0.3)];
+}
+
+.gradient-text {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-star-accent-rose to-star-accent-brown;
+}
+
+.soft-glow {
+  box-shadow: 0 0 40px rgba(143, 104, 88, 0.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-star-accent-brown/20 rounded-full;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-star-accent-brown/40;
+}
